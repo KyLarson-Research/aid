@@ -1,0 +1,22 @@
+# Singular-value decomposition
+from numpy import array
+from numpy import zeros
+from scipy.linalg import svd
+# define a matrix
+A = zeros((120000,9))
+print(A)
+# SVD
+U, s, VT = svd(A)
+print(U)
+print(s)
+print(VT)
+#AWS t2.micro insufficient RAM 100 ish GiB
+#AWS m5.8xlarge
+#ubuntu:~/environment $ python svd.py
+#[[0. 0. 0. ... 0. 0. 0.]
+# [0. 0. 0. ... 0. 0. 0.]
+# [0. 0. 0. ... 0. 0. 0.]
+# ...
+# [0. 0. 0. ... 0. 0. 0.]
+#[0. 0. 0. ... 0. 0. 0.]
+#[0. 0. 0. ... 0. 0. 0.]]
